@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Custmor Information</h1>
+    {% if custmors%}
+       <table border="3">
+         <thead>
+           <td>CustmorName</td>
+           <td>CustmorAdhorNumber</td>
+           <td>CustmorEmail</td>
+           <td>CustmorPhoneNumber</td>
+           <td>CustmorName</td>
+         </thead>
+         {%for cust in custmors%}
+         <tr>
+           <th>{{cust.custname}}</th>
+           <th>{{cust.custadhornumber}}</th>
+           <th>{{cust.custemail}}</th>
+           <th>{{cust.custphonenumber}}</th>
+           <th>{{cust.custage}}</th>
+         </tr>
+         {%endfor%}
+       </table>
+       {%endif%}
+  </body>
+</html>
